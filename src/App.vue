@@ -9,7 +9,7 @@
 </template>
 
 <style scoped>
-  h1, p
+  template
   {
     font-family: Arial, Helvetica, sans-serif;
   }
