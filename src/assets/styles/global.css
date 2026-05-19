@@ -1,0 +1,174 @@
+/* Importar estilos de Google Fonts */
+/*Fuentes*/
+@import url('https://fonts.googleapis.com/css2?family=Aleo:ital,wght@0,100..900;1,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+/*Simbolos*/
+@import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=arrow_circle_up');
+
+/* Reset */
+*, *::before, *::after
+{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* HTML */
+html
+{
+    font-size: 16px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 100;
+    color: #707070;
+    scroll-behavior: smooth;
+}
+
+/* CLASES GLOBALES Y GENERICAS */
+.flex
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.bgImg, *::before, *::after
+{
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.fullSize, *::before, *::after
+{
+    width: 100%;
+    height: 100%;
+}
+
+.transition, *::before{transition: background-color 0.3s ease, color 0.3s ease, opacity 0.3s ease, transform 0.3s ease;}
+
+.flexColumn{flex-direction: column;}
+
+/* Clases de contenedores de texto simples */
+.text
+{
+    margin: 7rem auto;
+    width: 85%;
+    text-align: center;
+}
+
+.text h2
+{
+    margin-bottom: 2rem;
+    font-family: "Aleo", serif;
+    font-size: 3.7rem;
+    font-weight: 700;
+}
+
+.text p
+{
+    margin-top: 1rem;
+    font-size: 1.7rem;
+    font-weight: 450;
+}
+
+/* Estilos de texto resaltado */
+.bold{font-weight: 530;}
+
+.bold[data-color="blue"]{color: #7395f7;}
+.bold[data-color="energy"]{  background: -webkit-linear-gradient(45deg, #2fb2fd 10%, #20f03a 55%, #fe5b1f 75%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;}
+.bold[data-color="pink"]{color: #fe3074;}
+.bold[data-color="strongOrange"]{color: #fd7c38;}
+.bold[data-color="orange"]{color: #fba904;}
+.bold[data-color="green"] {color: #6fc61e;}
+.bold[data-color="skyBlue"] {color: #4bcfdd;}
+.bold[data-color="purple"]{color: #aa79f4;}
+
+.bold[data-color="rainbow"]{background: -webkit-linear-gradient(45deg, #2fb2fd 10%, #e6f020 55%, #fe1f9a 75%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;}
+
+/* - - - - - - - - - - FONDO DE PÁGINAS - - - - - - - - - - */
+@keyframes cube 
+{
+    from
+    {
+        transform: scale(0) rotate(0deg) translate(-50%, -50%);
+        opacity: 1;
+    }
+    to
+    {
+        transform: scale(20) rotate(960deg) translate(-50%, -50%);
+        opacity: 0;
+    }
+}
+
+.background
+{
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    margin: 0;
+    padding: 0;
+    background: #ffffff;
+    overflow: hidden;
+    z-index: -1;
+}
+
+.background li
+{
+    position: absolute;
+    top: 80vh;
+    left: 45vw;
+    width: 10px;
+    height: 10px;
+    border: solid 1px #eeeef0;
+    color: transparent;
+    transform-origin: top left;
+    transform: scale(0) rotate(0deg) translate(-50%, -50%);
+    animation: cube 7s ease-in forwards infinite;
+}
+
+undefined
+.background li:nth-child(0)
+{
+    animation-delay: 0s;
+    left: 81vw;
+    top: 92vh;
+    border-color: #ffffff;
+}
+
+.background li:nth-child(1)
+{
+    animation-delay: 2s;
+    left: 31vw;
+    top: 64vh;
+}
+
+.background li:nth-child(2)
+{
+    animation-delay: 4s;
+    left: 3vw;
+    top: 15vh;
+}
+
+.background li:nth-child(3)
+{
+    animation-delay: 6s;
+    left: 65vw;
+    top: 24vh;
+}
+
+.background li:nth-child(4)
+{
+    animation-delay: 8s;
+    left: 48vw;
+    top: 72vh;
+}
+
+.background li:nth-child(5)
+{
+    animation-delay: 10s;
+    left: 96vw;
+    top: 40vh;
+    border-color: #ffffff;
+}
