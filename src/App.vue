@@ -1,14 +1,14 @@
 <script setup></script>
 
 <template>
-  <!--<ul class="background">
+  <ul class="background">
       <li></li>
       <li></li>
       <li></li>
       <li></li>
       <li></li>
       <li></li>
-  </ul>-->
+  </ul>
   
   <RouterView />
 </template>
