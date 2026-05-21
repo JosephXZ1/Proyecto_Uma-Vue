@@ -96,7 +96,7 @@ onUnmounted(() =>
 .header
 {
     width: 100%;
-    height: 15vh;
+    height: 15%;
     padding-left: 2rem;
     justify-content: space-between;
     background-color: transparent;
