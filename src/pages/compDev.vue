@@ -1,5 +1,5 @@
 <script setup>
-import Prueba from '../components/prueba.vue'
+//import Prueba from '../components/prueba.vue'
 
 //El header
 //import Header from '../components/header.vue'
@@ -13,9 +13,16 @@ import Prueba from '../components/prueba.vue'
 
 //El Footer
 //import Footer from '../components/footer.vue'
+
+import splitCont from '../components/home/splitCont.vue'
+import esp1 from '../assets/Multimedia/Imagenes/esp1.jpg'
+
+import Cards from '@/components/home/cards.vue';
 </script>
 
 <template>
+    <!-- <Prueba /> -->
+
     <!--<Header />-->
 
     <!--
@@ -28,7 +35,14 @@ import Prueba from '../components/prueba.vue'
 
     <!-- <Footer /> -->
 
-    <Prueba />
+    <!-- <splitCont
+        titulo="Primero... ¿Qué son las Umas?"
+        descripcion="Apartado rápido para conocer lo básico que necesitas saber para de las Umas, nos centraremos en algunos personajes, que tipo de corredoras son y características que se verán a mayor profundidad en otros apartados"
+        enlace="{ name: 'umas' }"
+        :imagenFondo="esp1"
+    /> -->
+
+    <Cards />
 </template>
 
 <style scoped>

@@ -54,10 +54,10 @@ onUnmounted(() =>
 
     <header class="transition header flex" :class="{ scrolled: isScrolled }">
         <!-- LOGO -->
-        <a href="/" class="flex transition">
+        <RouterLink :to="{ name: 'Home' }" class="flex transition">
             <h1>Cómo jugar</h1>
             <img src="../assets/Multimedia/Imagenes/logo_Uma.png" alt="Página principal">
-        </a>
+        </RouterLink>
 
         <!-- BOTÓN HAMBURGUESA -->
         <button class="headerButton flex transition" aria-label="Abrir menú" @click="toggleMenu">
@@ -68,22 +68,22 @@ onUnmounted(() =>
         <nav class="navBar flex" :class="{ active: menuOpen }">
             <ul class="flex">
                 <li class="fullSize bgImg" data-nav="uma">
-                    <a href="#" class="flex fullSize transition">Las Umas</a>
+                    <RouterLink :to="{ name: 'Umas' }" class="flex fullSize transition">Las Umas</RouterLink>
                 </li>
                 <li class="fullSize bgImg" data-nav="legacy">
-                    <a href="#" class="flex fullSize transition">Legado</a>
+                    <RouterLink :to="{ name: 'Legacy' }" class="flex fullSize transition">Legado</RouterLink>
                 </li>
                 <li class="fullSize bgImg" data-nav="training">
-                    <a href="#" class="flex fullSize transition">Entrenamiento</a>
+                    <RouterLink :to="{ name: 'Training' }" class="flex fullSize transition">Entrenamiento</RouterLink>
                 </li>
                 <li class="fullSize bgImg" data-nav="cards">
-                    <a href="#" class="flex fullSize transition">Cartas</a>
+                    <RouterLink :to="{ name: 'Cards' }" class="flex fullSize transition">Cartas</RouterLink>
                 </li>
                 <li class="fullSize bgImg" data-nav="stats">
-                    <a href="#" class="flex fullSize transition">Estadísticas</a>
+                    <RouterLink :to="{ name: 'Stats' }" class="flex fullSize transition">Estadísticas</RouterLink>
                 </li>
                 <li class="fullSize bgImg" data-nav="strategy">
-                    <a href="#" class="flex fullSize transition">Estrategia</a>
+                    <RouterLink :to="{ name: 'Strategy' }" class="flex fullSize transition">Estrategia</RouterLink>
                 </li>
             </ul>
         </nav>

@@ -7,6 +7,11 @@ import { createRouter, createWebHistory } from 'vue-router'
 //En sintesis, es como declarar variables, el Home se puede llamar como se desee pero es recomendable que se llame igual que el archivo .vue para evitar confusiones, y la direccion debe ser correcta para que funcione, si el archivo se llama home.vue, entonces la direccion debe ser '../views/home.vue', lo mismo para contact.vue, la direccion debe ser '../views/contact.vue'
 import Home from '../pages/home.vue'
 import Umas from '../pages/umas.vue'
+import Legacy from '@/pages/legacy.vue'
+import Training from '@/pages/training.vue'
+import Cards from '@/pages/cards.vue'
+import Stats from '@/pages/stats.vue'
+import Strategy from '@/pages/strategy.vue'
 
 import SandBox from '../pages/compDev.vue'
 
@@ -15,16 +20,51 @@ const routes =
 [
     {
       path: '/',
+      name: 'Home',
       component: Home
     },
-    {
-      path: '/compDev',
-      component: SandBox
-    },
+
     {
       path: '/umas',
+      name: 'Umas',
       component: Umas
-    }
+    },
+    {
+      path: '/legacy',
+      name: 'Legacy',
+      component: Legacy
+    },
+    {
+      path: '/training',
+      name: 'Training',
+      component: Training
+    },
+    {
+      path: '/cards',
+      name: 'Cards',
+      component: Cards
+    },
+    {
+      path: '/stats',
+      name: 'Stats',
+      component: Stats
+    },
+    {
+      path: '/strategy',
+      name: 'Strategy',
+      component: Strategy
+    },
+
+    //Este enlace es un sandBox, un sitio de prueba de componentes temporal, eliminar cuando se termine todo
+    {
+      path: '/compDev',
+      component: SandBox,
+      //Regla unica y detergente para que header no se renderice en sandBox
+      meta: 
+        {
+          ocultarHeader: true
+        }
+    },   
 ]
 
 const router = createRouter(
