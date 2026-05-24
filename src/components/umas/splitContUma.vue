@@ -26,8 +26,6 @@ defineProps(
     {
         type: String
     },
-
-    //Esta propiedad es básicamente un "interruptor" para voltear el orden (Texto|Img o Img|Text)
     invertido: 
     {
         type: Boolean,
@@ -40,16 +38,20 @@ defineProps(
 <template>
     <section class="uma flex" :class="{ 'reverse': invertido }">
         <img :src="imagen" alt="Todas las umas">
+        
         <div class="infoUma flex">
-            <h3>{{nombre}}</h3>
-            <p>{{descripcion1}}</p>
-            <p v-if="descripcion2">{{descripcion2}}</p>
-            <p v-if="descripcion3">{{descripcion3}}</p>
-            <ul>
+            <h3>{{ nombre }}</h3>
+            
+            <p>{{ descripcion1 }}</p>
+            <p v-if="descripcion2">{{ descripcion2 }}</p>
+            <p v-if="descripcion3">{{ descripcion3 }}</p>
+            
+            <ul v-if="lista && lista.length > 0">
                 <li v-for="(item, index) in lista" :key="index">
                     {{ item }}
                 </li>
             </ul>
+            
             <span v-if="span">{{ span }}</span>
         </div> 
     </section>
