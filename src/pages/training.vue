@@ -1,3 +1,12 @@
+<script setup>
+import Fondo from '@/components/fondoText.vue'
+import Training from '@/assets/Multimedia/Imagenes/training/background_train.jpg'
+
+</script>
+
 <template>
-    <h1>Training</h1>
+    <Fondo
+        titulo="El entrenamiento"
+        :imagenFondo="Training"
+    />
 </template>

@@ -1,3 +1,12 @@
+<script setup>
+import Fondo from '@/components/fondoText.vue'
+import Cartas from '@/assets/Multimedia/Imagenes/cards/background_cards.jpg'
+
+</script>
+
 <template>
-    <h1>Cards</h1>
+    <Fondo
+        titulo="Las Cartas"
+        :imagenFondo="Cartas"
+    />
 </template>
