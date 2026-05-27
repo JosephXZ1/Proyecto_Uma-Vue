@@ -37,6 +37,7 @@ defineProps(
 {
     width: 45%;
     height: auto;
+    border-radius: 1rem;
 }
 
 .info .text-block
@@ -50,7 +51,7 @@ defineProps(
 
 .text-block { position: relative; }
 
-.info .text-block p { margin: 1rem 0; }
+.info .text-block :deep(p) { margin: 1rem 0; }
 
 .reverse { flex-direction: row-reverse; }
 

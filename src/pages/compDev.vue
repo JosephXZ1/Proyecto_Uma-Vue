@@ -31,13 +31,14 @@ import imgMood from '@/assets/Multimedia/Imagenes/training/Mood.jpg';
 
         <p>Abajo estarán las cosas que puedes hacer, desde <span class="bold" data-color="blue">entrenar</span>, <span class="bold" data-color="green">descansar</span>, <span class="bold" data-color="skyBlue">habilidades</span>, <span class="bold" data-color="purple">enfermería</span>, <span class="bold" data-color="orange">recreación</span> y <span class="bold" data-color="pink">carreras</span>, todos a excepción de las habilidades consumirán un turno...</p>
 
-        <div id="details" class="popup flex transition" :class="{ 'active': popupActivo === 'details' }" @mouseleave="popupActivo = null">
+        <div id="details" class="popup flex transition" 
+        :class="{ 'active': popupActivo === 'details' }" :style="{'--popup-width': '55%'}" @mouseleave="popupActivo = null">
             <img :src="imgObjectives" alt="Objetivos">
         </div>
         
-        <div id="mood" class="popup flex transition" :class="{ 'active': popupActivo === 'mood' }" @mouseleave="popupActivo = null">
+        <div id="mood" class="popup flex transition"
+        :class="{'active': popupActivo === 'mood'}" :style="{'--popup-width' : '67%'}" @mouseleave="popupActivo = null">
             <img :src="imgMood" alt="Animo">
         </div>
-        
     </Prueba2>
 </template>
